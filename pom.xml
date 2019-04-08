@@ -7,6 +7,9 @@
     <groupId>cn.animalcity.gaokao</groupId>
     <artifactId>gaokao</artifactId>
     <version>0.0.1</version>
+    <modules>
+        <module>gaokao-net</module>
+    </modules>
     <packaging>pom</packaging>
 
     <name>gaokao</name>
@@ -18,5 +21,20 @@
         <version>2.1.4.RELEASE</version>
         <relativePath />
     </parent>
+
+    <properties >
+        <hutool.version>4.5.4</hutool.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
